@@ -1,0 +1,42 @@
+The `5-text_indentation` module
+================================
+
+
+This function prints a text with 2 new lines after each of
+these characters '.', '?' and ':'. The arguments received by
+this function must be a string otherwise raise error. There should
+be no space before and after each printed line.
+
+To use this function, you must first import it:
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+This function can be put to use now. Below are the few cases where the function is being
+tested:
+
+	Case 1: When string type is supplied
+	-------------------------------------
+	>>> text_indentation("Hello?")
+	Hello?
+	<BLANKLINE>
+
+	Case 2: When string is wrapped in bracket
+	--------------------------------------------
+	>>> text_indentation(("Hi there."))
+	Hi there.
+	<BLANKLINE>
+
+	Case 3: When only the punctuations are in a string with space
+	--------------------------------------------------
+	>>> text_indentation("    .   ?   :  ")
+	.
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	
+	Case 4: When wrong data type is supplied
+	----------------------------------------
+	>>> text_indentation(["Hello: friend."])
+	Traceback (most recent call last):
+	TypeError: text must be a string
